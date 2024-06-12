@@ -1,7 +1,7 @@
 // change url if used for render 
 
 
-const socket = io ('http://localhost:3001')
+const socket = io ('http://localhost:3001/?')
 
 const msgInput = document.querySelector(`#message`)
 const nameInput = document.querySelector(`#name`)
@@ -59,8 +59,8 @@ socket.on("message",(data)=>{
             nameInput.value
             ? `post__header--user`
             : `post__header--reply`} ">
-            <span class ="post__header--name"${name}</span>
-            <span class ="post__header--name"${time}</span>
+            <span class ="post__header--name">${name}</span>
+            <span class ="post__header--name">${time}</span>
             </div>
             <div class = "post__text">${text}</div> `
     } else{
